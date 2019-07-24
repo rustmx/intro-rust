@@ -23,4 +23,28 @@ class: center, middle
 
 ---
 
-# Introducción
+## ¿Qué es Rust?
+
+Rust, es un lenguaje de programación creado en los laboratorios de Mozilla. Sus 
+principales caracteristicas son la estabilidad, el manejo seguro de memoria y la 
+concurrencia.
+
+---
+
+## ¿En qué puedo usar Rust?
+
+Rust, es un lenguaje de programación de sistemas, esto quiere decir que se usa 
+para desarrollar software que proveerá servicios a otro software y que tiene 
+requerimientos de rendimiento muy estrictos(sistemas operativos, motores de 
+videojuegos, etc.)
+
+---
+
+| | C++ | Rust|
+|--- | --- | --- |
+|Liberar dos veces| :cold_sweat: | :sunglasses: |
+|Usar después de liberado | :cold_sweat: | :sunglasses: |
+|Apuntador nulo | :cold_sweat: | :sunglasses: |
+|Condición de carrera | :cold_sweat: | :sunglasses: |
+
+---
