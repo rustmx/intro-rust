@@ -48,3 +48,12 @@ videojuegos, etc.)
 |Condición de carrera | :cold_sweat: | :sunglasses: |
 
 ---
+
+## ¿Quiénes usan Rust?
+
+- Mozilla
+- Dropbox
+- Facebook
+- Google
+- Amazon
+- Microsoft
