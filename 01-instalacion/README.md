@@ -4,7 +4,9 @@ class: center, middle
 
 # Sesión 1:
 
+## Instalación
+
 ---
 
-## Agenda
+## what?
 
