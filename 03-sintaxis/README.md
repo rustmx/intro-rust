@@ -33,13 +33,14 @@ Representan un valor simple de cuatro posibles:
   - Son de longitud 8, 16, 32, 64 y 128 bits
   - Se definen como `i8`,`i16`, `i32`, `i64` y `i128` y sin signo `u8`, `u16`, `u32`, `u64` y `u128`.
   - `isize` y `usize` es para depender de la arquitectura.
-  - `Integer Overflow` es cuando un tipo u8 pasa de 255 a 256 como valor
-     - Causa un `Panic` en modo debug
-     - Rust hace un `two's complement wrapping`, convierte el 256 en 0, el 257 en 1 y asi sucesivamente 
+  - `Integer Overflow` es cuando por ej. un tipo u8 pasa de valor 255 a 256
+     - Causa un `Panic` en modo debug (default)
+     - Otros modos de Rust hacen un `two's complement wrapping`, que convierte el 256 en 0, el 257 en 1 y asi sucesivamente 
 * **Punto flotante:**  `f32` y `f64` _(default)_
 * **Logico:**  `bool` y puede ser `true` o `false`
 * **Caracter**
-  - Se especifica con comillas simples `'😻'`.  Representa un valor Unicode. 
+  - Se especifica con comillas simples `'😻'`.  Representa un valor Unicode.
+  - Valores entre `U+0000` a `U+D7FF` y `U+E000` a `U+10FFFF` 
 
 _Note:_ Las operaciones matematicas clasicas son suma (+), resta (-), multiplicacion (*), division (/) y residuo (%)
 
@@ -49,11 +50,62 @@ _Note:_ Las operaciones matematicas clasicas son suma (+), resta (-), multiplica
 Son tipos de dato que pueden agrupar multiples valores.
 
 ### Tuplas
+ - Agrupar valores de tipos de dato distintos
+ - Tamaño fijo
+ - Se puede usar `pattern matching` a traves de `destructuring`
+
+```
+  let tupla = (500, 9.3, 'z', "cadena");
+  println!("Tupla {:?}", tupla);
+
+  let (entero, flotante, caracter, cadena) = tupla;
+  println!("entero : {}", entero);
+  println!("flotante : {}", flotante);
+  println!("caracter : {}", caracter);
+  println!("cadena : {}", cadena);
+
+  let dos_enteros: (i32, u8) = (500, 1);
+  println!("Dos enteros con indice : {} y {}", dos_enteros.0, dos_enteros.1);
+```
+[Demo](https://repl.it/@wdonet/rust-tuples)
+
+---
+## Compuestos
 ### Arreglos
----
-## Intro
+ 
+ - Agrupar valores del mismo tipos de dato.
+ - Tamaño fijo.
+ - Indice comienza en cero.
+ - Utiles parar el `Stack` en lugar del `Heap`.
+
+ ```
+  let a = ["second", "minute", "hour", "day", "month", "year"];
+  println!("Arreglo a {:?}", a);
+
+  let b:[u8; 3] = [10, 20, 30]; // indica tipo de dato y tamaño del arreglo
+  println!("Elemento b[0] {}", b[0]);
+  println!("Elemento b[1] {}", b[1]);
+  println!("Elemento b[2] {}", b[2]);
+```
+[Demo](https://repl.it/@wdonet/rust-arrays)
+
+_Nota:_ Un `vector` es una coleccion similar que puede crecer en tamaño.
 
 ---
-## Intro
+## Panic
 
+**Panic** es el termino que Rust usa cuando un programa termina con error.
 
+![Panic](https://static.javatpoint.com/tutorial/rust/images/rust-recoverable-errors3.png "Panic")
+
+---
+## Result
+
+Muchas funciones de I/O devuelven un tipo de dato (enum) [Result](https://doc.rust-lang.org/nightly/std/result/enum.Result.html) que se usa para retornar y propagar errores.
+
+Sus variantes son:
+
+1. `Ok` para cuando la operacion es exitosa.
+2. `Err` representando un error y su posible valor.
+
+`Result` es una buena solucion para recuperarse de errores que usan la macro [panic!](https://doc.rust-lang.org/std/macro.panic.html). 
