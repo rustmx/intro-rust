@@ -89,7 +89,7 @@ enum IpAddr {
 }
 let home = IpAddr::V4(127, 0, 0, 1);
 ```
-Es posible definir funciones con `impl`.
+Es posible adjuntar funciones a objetos con `impl`.
 ```
 impl IpAddr {
   fn to_string(&self) -> String {
