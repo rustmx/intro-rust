@@ -5,13 +5,13 @@ Contenido del taller a realizarse en Agosto de 2019 en la ciudad de Colima.
 ## Temario
 
 - Instalacion
-- Variables y mutabilidad
-- Tipos de datos, Panic y estructuras
-- Control de flujo 
-- Enums y Pattern Matching
+- Variables y Shadowing
+- Tipos de datos y Panic
+- Estructuras y Enums
+- Control de flujo y Pattern Matching
 - Funciones
-- Propiedad
-- Prestamo
+- Ownership
+- Borrowing
 - Vectores
 - Traits
 - Modulos

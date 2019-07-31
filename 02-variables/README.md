@@ -4,7 +4,7 @@ class: center, middle
 
 # Sesión 2: 
 
-## Variables y Mutabilidad
+## Variables & Shadowing
 ---
 ### let
 Las variables son referencias no mutables a los espacios reservados en memoria para almacenar datos.
