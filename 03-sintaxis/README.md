@@ -46,7 +46,7 @@ _Note:_ Las operaciones matematicas clasicas son suma (+), resta (-), multiplica
 
 ---
 ## Cadenas
-Cadenas literales : `let x = "una prueba"`
+Cadenas literales : `let x: &str = "una prueba"`
  - No mutables
  - Se conoce su valor desde tiempo de compilación
  - Su valor se vuelve parte del código ejecutable, no en la memoria.
@@ -56,15 +56,27 @@ Cadenas literales : `let x = "una prueba"`
  - Se reserva en el Heap de la memoria
  - Su valor se libera cuando sale del _alcance_
 
- ```
+```
 {
-  // `s` no es válida aquí
-    let s = String::from("hello"); // s es válida de aquí en adelante
-  // hacer cosas con `s`
-} // Rust mando limpiar `s` aquí
-// `s` ya no es válida
+  let hola: &str = "hola"; // `hola` es válida de aquí en adelante
+  let cadena = String::from(hola); // `cadena` es válida de aquí en adelante
+  // ... 
+} // Rust mando limpiar `cadena` y `hola` aquí
+// `cadena` y `hola` ya no son válidas
 ```
 
+---
+## String Slice
+Permite hacer referencias a una secuencia de elementos dentro de una colección, más que la colección completa.
+
+La nomenclatura del tipo de dato Slice es `&str`.
+
+```
+let cadena = String::from("hello world");
+let hello: &str = &cadena[..5]; // Es lo mismo que `&s[0..5]`
+let world = &cadena[6..]; // Es lo mismo que indicar el último índice
+```
+<center><img src="https://doc.rust-lang.org/book/img/trpl04-06.svg" width="40%"></center>
 
 ---
 ## Compuestos 1/2

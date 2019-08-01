@@ -136,7 +136,7 @@ if let Coin::Quarter(state) = coin {
 }
 ```
 ---
-## Ciclos 1/2
+## Ciclos 1/3
 | `loop` | `while` | `for` |
 |:-------:|:------:|:--------:|
 | Ejecuta el codigo por siempre o hasta que se termine manualmente (`^C`). | Ejecuta el codigo siempre que la condicion se cumpla. | Usual para recorrer elementos de un tipo de dato compuesto como un arreglo o tupla.  Tambien se suele usar con rangos `(1..4)`. |
@@ -156,7 +156,7 @@ if let Coin::Quarter(state) = coin {
 ```
 
 ---
-## Ciclos 2/2
+## Ciclos 2/3
 ```
 /* While */
   let mut counter = counter + 5;
@@ -184,3 +184,26 @@ Utilizando un [rango](https://doc.rust-lang.org/std/ops/struct.Range.html) `(1..
 _**Note : ** Se puede usar `break` en cualquier ciclo para dar por terminada su ejecucion._
 
 [Demo](https://repl.it/@wdonet/rust-control-loops)
+
+---
+## Ciclos 3/3
+Trabajando con iteradores, el resultado puede enumerarse en tuplas y asi operar mas facil con el contenido de una colección.
+
+```
+fn first_word(s: &String) -> usize {
+    let bytes = s.as_bytes();  // convierte la cadena en arreglo de bytes
+
+    // `iter()` devuelve un objeto para poder iterar los elementos
+    // `enumerate()` transforma cada elemento en una `Tupla`
+    //               con índice y una referencia al elemento
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {  // `b' '` es un byte q representa el espacio
+            return i;
+        }
+    }
+    
+    s.len()
+}
+```
+
+Preocuparse por el manejo del índice y su relación con la colección es tedioso y propenso a errores.
