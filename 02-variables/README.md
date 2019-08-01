@@ -7,18 +7,19 @@ class: center, middle
 ## Variables & Shadowing
 ---
 ### let
-Las variables son referencias no mutables a los espacios reservados en memoria para almacenar datos.
+Las variables son enlaces no mutables a los valores o datos. Se suele leer como _La variable enlaza(bind) al valor_.
 ```
 let foo = 5; // no mutable
 foo = 6; // error en tiempo de compilacion
+let bar = foo;
 ```
+Ignorando la 2da línea, el valor `5` en `foo` se copiaría y se enlaza en `bar`.  Dos variables apuntando al valor `5` son agregados a la memoria `stack`
 
 ### mut
 Con `mut` el compilador sabe que una variable sera mutable todo su ciclo de via.
 ```
 let mut bar = String::new(); // mutable
 ```
-.
 
 - `::` se utiliza para tener acceso a funciones asociadas a los tipos de dato.
 - `new` es una funcion comun en muchos tipos de dato y es usada para crear nuevos valores.

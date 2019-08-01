@@ -44,6 +44,27 @@ Representan un valor simple de cuatro posibles:
 
 _Note:_ Las operaciones matematicas clasicas son suma (+), resta (-), multiplicacion (*), division (/) y residuo (%)
 
+---
+## Cadenas
+Cadenas literales : `let x = "una prueba"`
+ - No mutables
+ - Se conoce su valor desde tiempo de compilación
+ - Su valor se vuelve parte del código ejecutable, no en la memoria.
+
+`String`
+ - Es mutable
+ - Se reserva en el Heap de la memoria
+ - Su valor se libera cuando sale del _alcance_
+
+ ```
+{
+  // `s` no es válida aquí
+    let s = String::from("hello"); // s es válida de aquí en adelante
+  // hacer cosas con `s`
+} // Rust mando limpiar `s` aquí
+// `s` ya no es válida
+```
+
 
 ---
 ## Compuestos 1/2

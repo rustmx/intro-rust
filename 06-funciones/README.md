@@ -27,6 +27,26 @@ fn es_divisible_por(numerador: u32, divisor: u32) -> bool {
 ```
 
 ---
+## Función
+Es posible devolver más de un valor usando Tuplas.
+
+```
+fn main() {
+    let s1 = String::from("hello");
+
+    let (s2, len) = calculate_length(s1);
+
+    println!("The length of '{}' is {}.", s2, len);
+}
+
+fn calculate_length(s: String) -> (String, usize) {
+    let length = s.len(); // len() returns the length of a String
+
+    (s, length)
+}
+```
+
+---
 ## Métodos
 
 Son funciones agregadas a objetos como estructuras o enums.
@@ -55,14 +75,14 @@ impl Rectangle {
 
 ---
 ## Closures
-Tambien llamadas _lambdas_ son funciones que puede _capturar las variables_ del contexto desde el cual son ejecutadas.
-Son muy convenientes para usarlas al vuelo, los tipos de datos a la entrada y salida son inferidos.
+Tambien llamadas _lambdas_ son funciones que puede _capturar las variables_ del contexto desde el cual son ejecutadas hasta que la variable que apunta al closure sale del scope.
+
+Son muy convenientes para usarlas al vuelo.  Los tipos de datos a la entrada y salida son inferidos.
 
 - Usa `||` en lugar `()` para los argumentos
 - Las `{}` para el cuerpo de la funcion de _una sola linea_ son opcionales
 
 ```
-
 // function
 fn  function            (i: i32) -> i32 { i + 1 }
 
