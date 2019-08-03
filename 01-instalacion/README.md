@@ -7,7 +7,6 @@ class: center, middle
 ## Instalación
 
 ---
-
 Para instalar Rust solo hay que ir escribir en la línea de comandos la siguiente
 instrucción:
 
@@ -19,8 +18,10 @@ El comando anterior hace la instalación de la toolchain de Rust: `cargo, rustup
 * `rustup` nos ayuda instalar Rust de los canales oficiales y cambiar facilmente entre la versión estable, beta y nigthly.
 * `rustc` es el compilador de Rust.
 
----
+En **Windows** debes seguir las instrucciones en:
+https://forge.rust-lang.org/other-installation-methods.html
 
+---
 ## ¡Tu instalación de Rust está lista!
 
 Ahora vamos a empezar a adentrarnos en el lenguaje: [Variables](../02-variables/index.html)

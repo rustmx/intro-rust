@@ -145,6 +145,6 @@ let error: Result<i32, &str> = Err("Some error message");
 assert_eq!(error.is_err(), true);
 ```
 
-`Result` es una buena solucion para recuperarse de errores que usan la macro [panic!](https://doc.rust-lang.org/std/macro.panic.html). 
+`Result` es una mejor solucion para recuperarse de errores que usar la macro [panic!](https://doc.rust-lang.org/std/macro.panic.html). 
 
 

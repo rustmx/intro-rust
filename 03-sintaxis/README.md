@@ -129,10 +129,14 @@ _Nota:_ Un `vector` es una coleccion similar que puede crecer en tamaño.
 
 **Panic** es el termino que Rust usa cuando un programa termina con error.
 
-![Panic](https://static.javatpoint.com/tutorial/rust/images/rust-recoverable-errors3.png "Panic")
+![Panic](https://d2ddoduugvun08.cloudfront.net/items/3h3r303T0S3w3I2P3r1r/rust-recoverable-errors3.png?X-CloudApp-Visitor-Id=bf7a91ecb056d414416aacf954d815e0&v=bc748948 "Panic")
 
-Se puede lanzar un Panic de forma manual:
+Se puede lanzar un Panic de forma manual para casos extremos donde se quiere dar por terminado todos los hilos con un codigo de error `101`.
 
 ```
-panic!("This is a Panic :)");
+panic!();
+panic!(101);
+panic!("This is a {} {message}", "fancy ", message = "face ;)");
 ```
+
+Existe [compile_error!](https://doc.rust-lang.org/std/macro.compile_error.html) para algo similar pero en tiempo de compilación.
