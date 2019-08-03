@@ -31,6 +31,51 @@ concurrencia.
 
 ---
 
+## Multiparadigma
+
+- Imperativo
+- Estructurado
+- Funcional
+- Concurrente
+- Genérico
+- Compilado
+
+```fn  function            (i: i32) -> i32 { i + 1 }
+let closure_annotated = |i: i32| -> i32 { i + 1 };
+let closure_inferred  = |i     |          i + 1  ;
+```
+
+---
+
+## Línea temporal
+
+- Nació en 2006 como un proyecto de personal de Graydon Hoare
+- En 2009 Mozilla empieza a patrocinar el proyecto
+- 2010 es anunciado por Mozilla
+- 2012 es lanzada la primera versión alpha
+- 2015, Rust 1.0 es liberado. Nace Redox
+- Agosto 2019 estamos en la versión 1.36
+
+---
+## Comparación con otros lenguajes
+
+|                       | C/C++ | GC    | Rust |
+| --------------------- | ----- | ----- | ---- |
+| Control, flexibility  | 🎉:) | 🤷:) | :D |
+| Minimal to no runtime | 🎉:/| :) | :D |
+| Double free           | :/ | :) | :D |
+| Use after free        | :/ | :) | :D |
+| Data race             | :/ | :/ | :D |
+
+---
+
+¿Qué provee Rust?
+
+- Good abstraction
+- Memory safety ~ No GC
+- Good concurrency Handling
+
+---
 ## ¿En qué puedo usar Rust?
 
 Rust, es un lenguaje de programación de sistemas, esto quiere decir que se usa 
