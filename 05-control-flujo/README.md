@@ -117,17 +117,18 @@ println!("Valores {} y {}", six, none);
 Permite combinar `if` y `let` para manejar valores que empatan con un solo patron e ignorando el resto.
 
 ```
+let some_u8_value = Some(3);
 if let Some(3) = some_u8_value {
-  "three"
+  println!("El valor es tres");
 }
-println!("El valor es {}", some_u8_value);
 ```
 
-`if let` es para escribir/indentar menos, es un _syntax sugar_ para un `match`.
+[if let](https://doc.rust-lang.org/reference/expressions/if-expr.html) es para escribir/indentar menos, es un _syntax sugar_ para un `match`.
 
-Tambien se puede usar un caso `else` para el resto de patrones.
+Tambien se puede usar un caso `else` y combinar con otro `if let` para el resto de patrones.
 
 ```
+let mut coint = Coin::Quarter(Alaska);
 let mut count = 0;
 if let Coin::Quarter(state) = coin {
     println!("State quarter from {:?}!", state);
