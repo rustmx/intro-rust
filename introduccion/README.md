@@ -8,6 +8,8 @@ class: center, middle
 
 # Temario
 
+<br>
+
 - [Instalacion](../01-instalacion/index.html)
 - [Variables y Shadowing](../02-variables/index.html)
 - [Tipos de datos y Panic](../03-sintaxis/index.html)
@@ -25,6 +27,9 @@ class: center, middle
 
 ## ¿Qué es Rust?
 
+<br>
+<br>
+
 Rust, es un lenguaje de programación creado en los laboratorios de Mozilla. Sus 
 principales caracteristicas son la estabilidad, el manejo seguro de memoria y la 
 concurrencia.
@@ -33,14 +38,17 @@ concurrencia.
 
 ## Multiparadigma
 
-- Imperativo
-- Estructurado
-- Funcional
-- Concurrente
-- Genérico
-- Compilado
+<br>
 
-```fn  function            (i: i32) -> i32 { i + 1 }
+- #### Imperativo
+- #### Estructurado
+- #### Funcional
+- #### Concurrente
+- #### Genérico
+- #### Compilado
+
+```rust
+fn  function            (i: i32) -> i32 { i + 1 }
 let closure_annotated = |i: i32| -> i32 { i + 1 };
 let closure_inferred  = |i     |          i + 1  ;
 ```
@@ -48,6 +56,9 @@ let closure_inferred  = |i     |          i + 1  ;
 ---
 
 ## Línea temporal
+
+<br>
+<br>
 
 - Nació en 2006 como un proyecto de personal de Graydon Hoare
 - En 2009 Mozilla empieza a patrocinar el proyecto
@@ -59,24 +70,34 @@ let closure_inferred  = |i     |          i + 1  ;
 ---
 ## Comparación con otros lenguajes
 
-|                       | C/C++ | GC    | Rust |
-| --------------------- | ----- | ----- | ---- |
-| Control, flexibility  | 🎉:) | 🤷:) | :D |
-| Minimal to no runtime | 🎉:/| :) | :D |
-| Double free           | :/ | :) | :D |
-| Use after free        | :/ | :) | :D |
-| Data race             | :/ | :/ | :D |
+<br>
+<br>
+
+|                              | C/C++ |  GC   | Rust  |
+| ---------------------------- | :---: | :---: | :---: |
+| Control y flexibilidad       |  🎉   | 🤷‍♀️ |  😎   |
+| Runtime mínimo o sin runtime |  🎉   | 🤷‍♀️ |  😎   |
+| Liberar dos veces            |  😢   |  🎉   |  😎   |
+| Usar después de liberado     |  😢   |  🎉   |  😎   |
+| Condiciones de carrera       |  😢   |  😢   |  😎   |
 
 ---
 
-¿Qué provee Rust?
+## ¿Qué provee Rust?
 
-- Good abstraction
-- Memory safety ~ No GC
-- Good concurrency Handling
+<br>
+
+- ### Buenas abstracciones
+
+- ### Manejo seguro de memoria
+
+- ### Buen manejo de concurrencia
 
 ---
 ## ¿En qué puedo usar Rust?
+
+<br>
+<br>
 
 Rust, es un lenguaje de programación de sistemas, esto quiere decir que se usa 
 para desarrollar software que proveerá servicios a otro software y que tiene 
@@ -87,15 +108,20 @@ videojuegos, etc.)
 
 ## ¿Quiénes usan Rust?
 
-- Mozilla
-- Dropbox
-- Facebook
-- Google
-- Amazon
-- Microsoft
+<br>
+
+- ### Mozilla
+- ### Dropbox
+- ### Facebook
+- ### Google
+- ### Amazon
+- ### Microsoft
 
 ---
 
 ## ¡Empecemos a aprender!
+
+<br>
+<br>
 
 Capitulo siguiente: [Instalacion](../01-instalacion/index.html)
