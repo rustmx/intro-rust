@@ -21,6 +21,8 @@ class: center, middle
 - [Vectores](../09-vectores/index.html)
 - [Traits](../10-traits/index.html)
 - [Modulos](../11-modulos/index.html)
+- [Apendice A: Rocket]
+- [Apendice B: Rust y WebAssembly](../extra-wasm/index.html)
 
 
 ---
