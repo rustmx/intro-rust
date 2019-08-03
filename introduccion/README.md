@@ -40,15 +40,6 @@ videojuegos, etc.)
 
 ---
 
-| | C++ | Rust|
-|--- | --- | --- |
-|Liberar dos veces| :cold_sweat: | :sunglasses: |
-|Usar después de liberado | :cold_sweat: | :sunglasses: |
-|Apuntador nulo | :cold_sweat: | :sunglasses: |
-|Condición de carrera | :cold_sweat: | :sunglasses: |
-
----
-
 ## ¿Quiénes usan Rust?
 
 - Mozilla
@@ -57,3 +48,9 @@ videojuegos, etc.)
 - Google
 - Amazon
 - Microsoft
+
+---
+
+## ¡Empecemos a aprender!
+
+Capitulo siguiente: [Instalacion](../01-instalacion/index.html)
